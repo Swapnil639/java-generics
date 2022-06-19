@@ -6,23 +6,27 @@ public class MaximumNum {
     public static void main(String[] args) {
         System.out.println("Welcome to Maximum problem using Generics");
         MaximumNum obj = new MaximumNum();
-        System.out.println("Maximum among three Float number is :" + obj.compareTo());
+        System.out.println("Maximum among three String is :" + obj.compareTo());
 
     }
 
-    public Float compareTo() {
+    public String compareTo() {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter three Float Number :");
-        Float a = scanner.nextFloat();
-        Float b = scanner.nextFloat();
-        Float c = scanner.nextFloat();
-        Float maximum;
+        System.out.println("Enter three String :");
 
-        if (a > b && a > c) {
-            maximum = a;
-        } else if (b > a && b > c) {
+        String a = scanner.nextLine();
+        System.out.println(a);
+
+        String b = scanner.nextLine();
+        System.out.println(b);
+
+        String c = scanner.nextLine();
+        System.out.println(c);
+
+        String maximum=a;
+        if (b.compareTo(maximum)>0) {
             maximum = b;
-        } else {
+        } else if (c.compareTo(maximum)>0) {
             maximum = c;
         }
         return maximum;
